@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Alert from './components/layout/Alert';
 import Users from './components/users/Users';
@@ -59,7 +59,7 @@ class App extends Component {
     const { users, user, repos, loading, alert } = this.state;
 
     return (
-      <Router>
+      <HashRouter>
         <div className='App'>
           <Navbar />
           <div className='container'>
@@ -98,7 +98,7 @@ class App extends Component {
             </Switch>
           </div>
         </div>
-      </Router>
+      </HashRouter>
     );
   }
 }
