@@ -8,7 +8,7 @@ const Users = ({ users, loading }) => {
     return <Spinner />;
   } else {
     return (
-      <div style='grid'>
+      <div className='grid'>
         {users.map(user => (
           <UserItem key={user.id} user={user} />
         ))}
